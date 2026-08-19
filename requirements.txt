@@ -1,0 +1,54 @@
+# RiskLens — Building Graph RAG using Azure
+#
+# Install with:
+#     pip install -r requirements.txt
+#
+# Grouped by what each library actually does in this project.
+
+
+# --- Basics ---------------------------------------------------
+# python-dotenv  reads your .env file so keys stay out of the code
+# pandas         reads and writes the CSV review files
+# openpyxl       lets pandas open company_master.xlsx
+python-dotenv
+pandas
+openpyxl
+
+
+# --- Talking to Azure services --------------------------------
+# azure-storage-blob            uploads and downloads the PDFs
+# azure-ai-documentintelligence reads the PDFs, keeping tables intact
+# azure-search-documents        creates the text index and searches it
+# azure-ai-contentsafety        the guardrails at input and output
+# openai                        used to call Azure OpenAI models
+azure-storage-blob
+azure-ai-documentintelligence
+azure-search-documents
+azure-ai-contentsafety
+openai
+
+
+# --- The graph ------------------------------------------------
+# gremlinpython  connects to Cosmos DB and runs graph queries
+gremlinpython
+
+
+# --- The answering agent --------------------------------------
+# langgraph        describes the answer flow as steps with decisions
+# langchain-openai connects that flow to the Azure OpenAI model
+langgraph
+langchain-openai
+
+
+# --- Seeing and sharing ---------------------------------------
+# pyvis      draws the graph as an interactive HTML page
+# streamlit  the simple web interface for asking questions
+pyvis
+streamlit
+
+
+# --- Notebooks ------------------------------------------------
+# jupyter    runs the teaching notebooks
+# ipykernel  makes this virtual environment visible to Jupyter
+jupyter
+ipykernel

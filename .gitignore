@@ -1,0 +1,23 @@
+# Secrets - never commit
+.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Project data
+data/raw_pdfs/*.pdf
+data/extracted/*.json
+data/review/*.csv
+evaluation/results/*
+*.html
+
+# Keep the folders themselves
+!.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
